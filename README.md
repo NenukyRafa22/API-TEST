@@ -7,6 +7,10 @@ Spring boot
 
 Pruebas para el metodo get
 ![alt text](https://github.com/NenukyRafa22/API-TEST/blob/master/img/cget2.PNG) 
+Consola
+![alt text](https://github.com/NenukyRafa22/API-TEST/blob/master/img/cget3.PNG) 
+
+
 
 
 
