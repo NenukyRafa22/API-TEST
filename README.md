@@ -11,6 +11,12 @@ Consola
 ![alt text](https://github.com/NenukyRafa22/API-TEST/blob/master/img/cget3.PNG) 
 
 
+Pruebas para el metodo post
+![alt text](https://github.com/NenukyRafa22/API-TEST/blob/master/img/test3.PNG) 
+Consola
+![alt text](https://github.com/NenukyRafa22/API-TEST/blob/master/img/test4.PNG) 
+
+
 
 
 
