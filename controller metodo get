@@ -1,0 +1,14 @@
+	@ApiOperation(value="Consulta de solicitud transacciones", nickname="Consulta",
+			response=ConsultaSolicitudResponseTO.class, tags={" "})
+	@ApiResponses({@ApiResponse(code=200, message="Ok", response=ConsultaSolicitudResponseTO.class),
+		@ApiResponse(code=400, message="Entrada incorrecta", response=ResponseError.class),
+		@ApiResponse(code=404, message="No encontrado", response=ResponseError.class),
+		@ApiResponse(code=500, message="Error inesperado", response=ResponseError.class)})
+	@GetMapping(value="/solicitudes", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> consulta(
+			@Valid @RequestHeader(defaultValue="eyJhbGciOiJSUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJIYXNoQ29kZSI6IjY0NTVlMDBjYjgxMWY5MjhhMjgwODNlNzQ1YTcxYjQ5MGYyYzRlYTY4MzE1MGU3MWY4NmQ1NjY4Y2VlODgyOTdkODVmM2ExZTNjZGY2ZTkxZmQ2NGI0YWZkYjEzMDg5M2Q4ZjI3MDY5YmZhNGQ2ZWZlZmM5ZWU1ZTNlZjE1YzBlIn0.bGDQoQTibydo10-EIOnI9cfSJUI2SsA3UUYbnn-0K9qRzL-kstxbe4cqBirh3-Gayjw0rrqkDKkeZi-4MCrGDx4tf2eaABQPsrbD0IixydOKT2DuIHOk383OkigCq9ppr1o9OUrwpsVn_W9QROIQRpQcWqgHsMdzY73j2Qv9oNI", name="Token", required=true) String token,
+			@NotBlank @ApiParam(type="String", value="20181029122219122220158056") @RequestParam(name="idSolicitud", required = true) String idSolicitud)
+	{
+		LOG.info("Controller - Consulta ");
+		return creditosBusiness.consulta(idSolicitud);
+    }
